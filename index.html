@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Online Registration Form</title>
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <h1>The Code Review</h1>
 
         <h2>Sign up for our Newsletter</h2>
@@ -21,7 +23,7 @@
     <main>
         <form>
             <fieldset class="contact">
-                <legend>Contact Information</legend>
+                <legend class="contact_info">Contact Information</legend>
 
                 <label for="name">Full Name</label>
                 <input type="text" alt="name" id="name" placeholder="required" name="user-name" required>
@@ -97,34 +99,36 @@
 
                 <label for="zip">Zip Code</label>
                 <input type="number" id="zip" name="zipcode">
+
+                <hr class="regular_last">
             </fieldset>
 
-            <hr class="regular">
-
             <fieldset class="newsletter">
-                <legend>Newsletter</legend>
-                <p>Select the newsletters you would like to receive</p>
+                <legend class="newsletter_info">Newsletter</legend>
+                <section id="newsletter_choice">
+                    <p>Select the newsletters you would like to receive</p>
 
 
-                <input type="checkbox" id="html_news" name="html_checkbox">
-                <label for="html_news">HTML News</label>
+                    <input type="checkbox" id="html_news" value="html_checkbox" name="type_checkbox" checked>
+                    <label for="html_news">HTML News</label>
 
-                <input type="checkbox" id="css_news" name="css_checkbox">
-                <label for="css_news">CSS News</label>
+                    <input type="checkbox" id="css_news" value="css_checkbox" name="type_checkbox">
+                    <label for="css_news">CSS News</label>
 
-                <input type="checkbox" id="js_news" name="js_checkbox">
-                <label for="js_news">Javascript News</label>
+                    <input type="checkbox" id="js_news" value="js_checkbox" name="type_checkbox">
+                    <label for="js_news">Javascript News</label>
+                </section>
 
-                <p>Newsletter Format</p>
+                <section id="newsletter_format">
+                    <p>Newsletter Format</p>
+                    <input type="radio" id="html_format" value="html_format" name="format_type" checked>
+                    <label for="html_format">HTML</label>
 
-                <input type="checkbox" id="html_format" name="html_format">
-                <label for="html_format">HTML</label>
-
-                <input type="checkbox" id="plain_format" name="plain_format">
-                <label for="plain_format">Plain Format</label>
-
+                    <input type="radio" id="plain_format" value="plain_format" name="format_type">
+                    <label for="plain_format">Plain Format</label>
+                </section>
                 <label for="topics">Other topics you'd like to hear about</label>
-                <textarea id="topics"></textarea>
+                <textarea id="topics" name="user_suggestions"></textarea>
 
                 <button type="submit">Sign Up</button>
 
