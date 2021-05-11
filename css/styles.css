@@ -15,10 +15,16 @@ form{
    
 }
 
+input::placeholder,
+textarea::placeholder{
+    font-style: italic;
+}
+
 header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 
@@ -38,11 +44,11 @@ header{
 }
 
 .contact{
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
-.contact_info{
-    margin: 3rem 0 1rem 0;
+.legend{
+    margin: 1rem 0;
 }
 
 
@@ -61,9 +67,11 @@ input,textarea{
 }
 
 input:focus,
+input[value="plain_format"]:focus,
 textarea:focus,
 select:focus{
     outline-color: rgb(128, 210, 235);
+    transition: outline-color .2s ease;
 }
 
 .contact input, textarea, select{
@@ -146,10 +154,17 @@ label[for="topics"]{
     font-size: .90rem;
 }
 
+#newsletter_choice,#newsletter_format{
+    background-color:rgb(210, 227, 250);
+    padding: 5px;
+}
+
+
 .newsletter p, #newsletter_format p{
     margin: 1rem 0;
     text-align: left;
 }
+
 
 textarea{
     height: 5rem;
@@ -167,10 +182,7 @@ footer{
 @media screen and (min-width: 1024px) {
     form{
         max-width: 60%;
-    }
 
-    .header{
-        height: 25vh;
     }
 
     .header h2{
@@ -196,11 +208,7 @@ footer{
     }
 
     #newsletter_choice, #newsletter_format{
-        max-width: 30%;
+        max-width: 40%;
     }
-
-   
-
-
 
 }
